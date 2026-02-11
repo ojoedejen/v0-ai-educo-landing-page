@@ -11,7 +11,7 @@ import { ScrollProgressBar } from "@/components/ui/scroll-progress-bar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#c4b5a3] p-4 md:p-6 lg:p-8 animate-page-fade-in">
+    <div className="min-h-screen bg-[#c4b5a3] p-4 md:p-6 lg:p-8 animate-page-fade-in bg-purple-500">
       {/* Scroll Progress Indicator */}
       <ScrollProgressBar />
       
