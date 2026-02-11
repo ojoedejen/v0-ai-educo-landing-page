@@ -1,13 +1,15 @@
 "use client";
 
 import { Home } from "lucide-react";
+import Link from "next/link";
 
 const navItems = [
-  { label: "Home", active: true },
-  { label: "About Us", active: false },
-  { label: "Feature", active: false },
-  { label: "Support", active: false },
-  { label: "Community", active: false },
+  { label: "Home", active: true, href: "/" },
+  { label: "About Us", active: false, href: "#about" },
+  { label: "Feature", active: false, href: "#features" },
+  { label: "Resources", active: false, href: "/resources" },
+  { label: "Support", active: false, href: "#support" },
+  { label: "Community", active: false, href: "#community" },
 ];
 
 export function Header() {
@@ -23,18 +25,18 @@ export function Header() {
       {/* Navigation */}
       <nav className="hidden md:flex items-center gap-1">
         {navItems.map((item, index) => (
-          <button
+          <Link
             key={item.label}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${
-              item.active
-                ? "bg-[#ff5c35] text-white flex items-center gap-2 hover-glow"
-                : "text-gray-300 hover:text-white hover:bg-white/10"
-            }`}
+            href={item.href}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${item.active
+              ? "bg-[#ff5c35] text-white flex items-center gap-2 hover-glow"
+              : "text-gray-300 hover:text-white hover:bg-white/10"
+              }`}
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             {item.active && <Home className="w-4 h-4" />}
             {item.label}
-          </button>
+          </Link>
         ))}
       </nav>
 
@@ -46,12 +48,12 @@ export function Header() {
         </div>
 
         {/* User Avatar */}
-        
+
 
         {/* Pro Badge */}
         <div className="flex items-center gap-1 text-white text-sm cursor-pointer transition-all duration-300 hover:scale-105">
-          
-          
+
+
         </div>
       </div>
     </header>
