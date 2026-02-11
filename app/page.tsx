@@ -11,10 +11,10 @@ import { ScrollProgressBar } from "@/components/ui/scroll-progress-bar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#c4b5a3] p-4 md:p-6 lg:p-8 animate-page-fade-in">
+    <div className="min-h-screen bg-white p-4 md:p-6 lg:p-8 animate-page-fade-in">
       {/* Scroll Progress Indicator */}
       <ScrollProgressBar />
-      
+
       {/* Main Container with gradient background */}
       <div
         className="relative rounded-3xl overflow-hidden"
@@ -36,11 +36,11 @@ export default function Home() {
         />
 
         {/* Animated gradient blob */}
-        <div 
+        <div
           className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-300/30 to-pink-300/30 rounded-full blur-3xl animate-morph pointer-events-none"
           aria-hidden="true"
         />
-        <div 
+        <div
           className="absolute bottom-40 left-10 w-80 h-80 bg-gradient-to-r from-orange-200/20 to-yellow-200/20 rounded-full blur-3xl animate-morph pointer-events-none"
           style={{ animationDelay: "-4s" }}
           aria-hidden="true"

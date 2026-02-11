@@ -69,10 +69,35 @@ export function BuilderKitModal({ kit, open, onOpenChange }: BuilderKitModalProp
             {/* Getting Started */}
             <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/20 dark:to-blue-950/20 p-6 rounded-lg border">
                 <h3 className="font-semibold text-lg mb-2">Getting Started</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground mb-4">
                     This kit provides comprehensive guidance and templates to help you build professional assets quickly.
                     Follow the step-by-step instructions and leverage AI tools to accelerate your workflow.
                 </p>
+                {kit.docsUrl && (
+                    <a
+                        href={kit.docsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-200 font-medium"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        Open Documentation
+                    </a>
+                )}
             </div>
         </div>
     );

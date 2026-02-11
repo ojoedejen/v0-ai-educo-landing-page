@@ -63,8 +63,8 @@ export function FeatureCards() {
         <div className="flex-1 flex items-center justify-center mb-4">
           <div className="relative w-full max-w-[200px] aspect-[4/3] overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-105">
             <Image
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop"
-              alt="Person working on laptop"
+              src="/best-teacher-card.png"
+              alt="Best Teacher"
               fill
               className="object-cover"
             />

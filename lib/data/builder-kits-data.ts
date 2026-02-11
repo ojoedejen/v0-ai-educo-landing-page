@@ -13,6 +13,7 @@ export const builderKits: BuilderKit[] = [
             'Design tokens and guidelines'
         ],
         hasForm: false,
+        docsUrl: 'https://www.designsystems.com/getting-started/',
     },
     {
         id: 'prd-kit',
@@ -28,6 +29,7 @@ export const builderKits: BuilderKit[] = [
         ],
         hasForm: true,
         formType: 'prd',
+        docsUrl: 'https://www.productplan.com/glossary/product-requirements-document/',
     },
     {
         id: 'pitch-master-kit',
@@ -42,6 +44,7 @@ export const builderKits: BuilderKit[] = [
         ],
         hasForm: true,
         formType: 'pitch-master',
+        docsUrl: 'https://gamma.app/docs',
     },
     {
         id: 'complete-branding-kit',
@@ -57,6 +60,7 @@ export const builderKits: BuilderKit[] = [
         ],
         hasForm: true,
         formType: 'branding',
+        docsUrl: 'https://www.canva.com/learn/branding-kit/',
     },
     {
         id: 'tech-stack-checklist',
@@ -82,6 +86,7 @@ export const builderKits: BuilderKit[] = [
             'Low-bandwidth optimization'
         ],
         hasForm: false,
+        docsUrl: 'https://stackshare.io/stacks',
     },
     {
         id: 'social-media-generator',
@@ -98,6 +103,7 @@ export const builderKits: BuilderKit[] = [
         ],
         hasForm: true,
         formType: 'social-media',
+        docsUrl: 'https://buffer.com/library/social-media-content-calendar/',
     },
     {
         id: 'research-validation-kit',
@@ -111,5 +117,6 @@ export const builderKits: BuilderKit[] = [
             'User interview frameworks'
         ],
         hasForm: false,
+        docsUrl: 'https://www.strategyzer.com/library/the-business-model-canvas',
     },
 ];

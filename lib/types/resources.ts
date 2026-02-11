@@ -9,6 +9,7 @@ export interface BuilderKit {
   hasForm: boolean;
   formType?: 'prd' | 'pitch-master' | 'branding' | 'social-media' | 'design-system' | 'tech-stack' | 'research';
   icon?: string;
+  docsUrl?: string;
 }
 
 export interface TechStack {
@@ -20,7 +21,7 @@ export interface TechStack {
   icon?: string;
 }
 
-export type TechCategory = 
+export type TechCategory =
   | 'AI Vibe'
   | 'Frontend'
   | 'Backend'

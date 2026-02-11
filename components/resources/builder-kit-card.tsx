@@ -14,16 +14,16 @@ interface BuilderKitCardProps {
 export function BuilderKitCard({ kit, onClick }: BuilderKitCardProps) {
     return (
         <Card
-            className="group cursor-pointer hover-lift transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-white to-purple-50/30 dark:from-gray-900 dark:to-purple-950/20"
+            className="group cursor-pointer hover-lift transition-all duration-300 border border-gray-200 hover:border-purple-400 hover:shadow-xl bg-white overflow-hidden"
             onClick={onClick}
         >
-            <CardHeader>
+            <CardHeader className="pb-3">
                 <div className="flex items-start justify-between mb-2">
-                    <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
+                    <CardTitle className="text-xl font-bold group-hover:text-purple-600 transition-colors">
                         {kit.name}
                     </CardTitle>
                 </div>
-                <CardDescription className="text-sm leading-relaxed">
+                <CardDescription className="text-sm leading-relaxed text-gray-600">
                     {kit.description}
                 </CardDescription>
             </CardHeader>
@@ -35,7 +35,7 @@ export function BuilderKitCard({ kit, onClick }: BuilderKitCardProps) {
                         <Badge
                             key={tag}
                             variant="secondary"
-                            className="text-xs px-2 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300"
+                            className="text-xs px-3 py-1 bg-purple-50 text-purple-700 border border-purple-200 rounded-full"
                         >
                             {tag}
                         </Badge>
@@ -43,19 +43,19 @@ export function BuilderKitCard({ kit, onClick }: BuilderKitCardProps) {
                 </div>
 
                 {/* Features Preview */}
-                <div className="space-y-1">
-                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                <div className="space-y-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
                         You'll Create:
                     </p>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1.5">
                         {kit.features.slice(0, 3).map((feature, index) => (
-                            <li key={index} className="text-sm text-muted-foreground flex items-start">
-                                <span className="mr-2">•</span>
+                            <li key={index} className="text-sm text-gray-700 flex items-start">
+                                <span className="mr-2 text-purple-500">•</span>
                                 <span>{feature}</span>
                             </li>
                         ))}
                         {kit.features.length > 3 && (
-                            <li className="text-sm text-muted-foreground font-medium">
+                            <li className="text-sm text-purple-600 font-medium">
                                 +{kit.features.length - 3} more
                             </li>
                         )}
@@ -64,8 +64,8 @@ export function BuilderKitCard({ kit, onClick }: BuilderKitCardProps) {
 
                 {/* CTA Button */}
                 <Button
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                    variant="outline"
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 group-hover:shadow-lg"
+                    variant="default"
                 >
                     Start Building
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
