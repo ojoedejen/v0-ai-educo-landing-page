@@ -18,7 +18,7 @@ export function FeatureCards() {
             <ArrowRight className="w-4 h-4 text-[#1a1a1a] transition-transform duration-300 group-hover:translate-x-1" />
           </div>
           <div className="w-10 h-10 rounded-xl bg-[#8b5cf6] flex items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-12 cursor-pointer">
-            <Bell className="w-5 h-5 text-black" />
+            <Bell className="w-5 h-5 text-background" />
           </div>
         </div>
 
