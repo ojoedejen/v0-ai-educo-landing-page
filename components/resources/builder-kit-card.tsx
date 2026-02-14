@@ -62,14 +62,49 @@ export function BuilderKitCard({ kit, onClick }: BuilderKitCardProps) {
                     </ul>
                 </div>
 
-                {/* CTA Button */}
-                <Button
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 group-hover:shadow-lg"
-                    variant="default"
-                >
-                    Start Building
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                {/* CTA Buttons */}
+                <div className="flex flex-col gap-2">
+                    <Button
+                        className="w-full bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 group-hover:shadow-lg"
+                        variant="default"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onClick();
+                        }}
+                    >
+                        {kit.hasForm ? 'Start Building' : 'View Details'}
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+
+                    {kit.docsUrl && (
+                        <Button
+                            asChild
+                            variant="outline"
+                            className="w-full border-purple-200 text-purple-700 hover:bg-purple-50 transition-all duration-300"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <a href={kit.docsUrl} target="_blank" rel="noopener noreferrer">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="mr-2"
+                                >
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                                Open Doc
+                            </a>
+                        </Button>
+                    )}
+                </div>
             </CardContent>
         </Card>
     );
