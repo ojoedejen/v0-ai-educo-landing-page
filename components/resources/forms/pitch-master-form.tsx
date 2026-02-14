@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+import { Button } from '../../ui/button';
+import { Input } from '../../ui/input';
+import { Label } from '../../ui/label';
+import { Textarea } from '../../ui/textarea';
 import { ChevronRight, ChevronLeft, Sparkles } from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { Card } from '../../ui/card';
 
 export function PitchMasterForm() {
     const [currentStep, setCurrentStep] = useState(1);

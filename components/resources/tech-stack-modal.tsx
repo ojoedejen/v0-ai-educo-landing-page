@@ -7,11 +7,11 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle,
-} from '@/components/ui/dialog';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+} from '../ui/dialog';
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
 import { ExternalLink, BookOpen } from 'lucide-react';
-import { ScrollArea } from '@/components/ui/scroll-area';
+import { ScrollArea } from '../ui/scroll-area';
 
 interface TechStackModalProps {
     tool: TechStack | null;

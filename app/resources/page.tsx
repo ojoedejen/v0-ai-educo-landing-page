@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 import { BuilderKitsSection } from '@/components/resources/builder-kits-section';
 import { TechStackSection } from '@/components/resources/tech-stack-section';
 import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
-import { ScrollProgressBar } from '@/components/ui/scroll-progress-bar';
+import { ScrollProgressBar } from '../../components/ui/scroll-progress-bar';
 import { Wrench, Code2 } from 'lucide-react';
 
 export default function ResourcesPage() {

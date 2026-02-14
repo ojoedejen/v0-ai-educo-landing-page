@@ -7,9 +7,9 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle,
-} from '@/components/ui/dialog';
-import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
+} from '../ui/dialog';
+import { Badge } from '../ui/badge';
+import { ScrollArea } from '../ui/scroll-area';
 import { CheckCircle2 } from 'lucide-react';
 import { PRDKitForm } from './forms/prd-kit-form';
 import { PitchMasterForm } from './forms/pitch-master-form';
